@@ -13,7 +13,17 @@ $cl-rose-2: hsl(0, 74%, 74%);
 $ff-josefin-sans: "Josefin Sans", sans-serif;
 
 // FONT-SIZE
+$fs-small: 1.4rem;
 $fs-normal: 1.6rem;
+$fs-medium: 2.2rem;
+$fs-xxlarge: 6.4rem;
+
+// FONT-WEIGHT
+$fw-xtiny: 300;
+$fw-tiny: 400;
+$fw-small: 500;
+$fw-medium: 600;
+$fw-large: 700;
 
 // MIXIN
 @mixin transitionAll {
