@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://github.com/quielLovesLasagna/base-apparel-coming-soon](https://github.com/quielLovesLasagna/base-apparel-coming-soon)
+- Live Site URL: [https://quiel-base-apparel-coming-soon.netlify.app/](https://quiel-base-apparel-coming-soon.netlify.app/)
 
 ## My process
 
