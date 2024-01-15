@@ -1,0 +1,151 @@
+@use "./abstracts" as abs;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: abs.$ff-josefin-sans;
+	font-size: abs.$fs-normal;
+}
+
+svg,
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 57.5% 1fr;
+	min-height: 100vh;
+
+	@media only screen and (max-width: 62.5em) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 15% 50% 1fr;
+		grid-template-areas:
+			"logo"
+			"picture"
+			"info";
+		position: relative;
+	}
+
+	&__info {
+		padding: 6.4rem 16rem;
+		background: url(../../images/bg-pattern-desktop.svg),
+			linear-gradient(135deg, abs.$cl-white, abs.$cl-white-2);
+		background-size: cover;
+
+		@media only screen and (max-width: 62.5em) {
+			grid-area: info;
+			text-align: center;
+			padding: 10rem;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 13rem;
+
+		@media only screen and (max-width: 62.5em) {
+			grid-area: logo;
+			position: absolute;
+			top: 50%;
+			left: 7%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__heading-primary {
+		font-size: 6.4rem;
+		text-transform: uppercase;
+		letter-spacing: 2rem;
+		font-weight: 600;
+		color: abs.$cl-grayish-red;
+		margin-bottom: 3rem;
+
+		span {
+			color: abs.$cl-desaturated-red;
+			font-weight: 300;
+		}
+	}
+
+	&__text-content {
+		max-width: 45rem;
+
+		@media only screen and (max-width: 62.5em) {
+			font-size: 2.2rem;
+			max-width: 70rem;
+		}
+	}
+
+	&__text {
+		line-height: 1.6;
+		color: abs.$cl-desaturated-red;
+		font-weight: 500;
+		margin-bottom: 3rem;
+	}
+
+	&__input-container {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	&__input {
+		outline: none;
+		font-size: inherit;
+		font-family: inherit;
+		border: 1px solid abs.$cl-desaturated-red;
+		border-radius: 100rem;
+		padding: 2rem 2.5rem;
+		background-color: transparent;
+		width: 100%;
+	}
+
+	&__button {
+		cursor: pointer;
+		border: none;
+		outline: none;
+		background: linear-gradient(135deg, abs.$cl-rose, abs.$cl-rose-2);
+		display: grid;
+		place-items: center;
+		height: 5.8rem;
+		width: 10rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-radius: 50rem;
+		box-shadow: 0 1rem 2rem rgba(abs.$cl-desaturated-red, 0.5);
+		@include abs.transitionAll;
+
+		@media only screen and (max-width: 62.5em) {
+			height: 6.5rem;
+		}
+
+		&:hover {
+			opacity: 0.6;
+			box-shadow: 0 1rem 2rem rgba(abs.$cl-desaturated-red, 1);
+		}
+	}
+
+	&__picture {
+		background-image: url(../../images/hero-desktop.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+
+		@media only screen and (max-width: 62.5em) {
+			grid-area: picture;
+			background-image: url(../../images/hero-mobile.jpg);
+		}
+	}
+}
